@@ -10,8 +10,10 @@ But we have [links](https://i.imgur.com/yChNWkg.png)
 
 ## Here's a subsection.
 
-This is very important stuff.
+There may be no underlining, but:
 
-Put things here to remember them!
+* You can do bullet lists
+* And here's another bullet
 
-I remember nothing.
+1. You can also do numbered lists
+1. Here's another number
