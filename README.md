@@ -6,7 +6,7 @@ You can do *italics* and **boldface**. ~~__Is this underline?__~~
 
 *No underlining in markdown :(*
 
-But we have [links](imgur.com/yChNWkg)
+But we have [links](https://www.imgur.com/yChNWkg)
 
 ## Here's a subsection.
 
