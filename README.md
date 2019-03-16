@@ -1,6 +1,6 @@
 # Hello world!
 
-This is a GitHub Markdown file.
+This is a [GitHub Markdown](https://guides.github.com/features/mastering-markdown/) file.
 
 You can do *italics* and **boldface**. ~~__Is this underline?__~~
 
