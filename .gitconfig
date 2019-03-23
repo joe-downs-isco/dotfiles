@@ -2,3 +2,15 @@
 	name = Joe Downs
 	email = joedowns502@gmail.com
 
+[alias]
+	apr = pull --rebase
+	pr = pull --rebase
+	di = diff
+	ci = commit
+	st = status
+	co = checkout
+	fap = fetch --all --prune
+	logs = log --topo-order --decorate --stat
+	graph = log --graph --decorate --abbrev-commit --pretty=oneline
+	grapha = log --graph --decorate ----abbrev-commit --pretty=oneline --all
+	dw = diff --word-diff
