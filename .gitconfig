@@ -3,11 +3,13 @@
 	email = joedowns502@gmail.com
 
 [alias]
+	ad = add
 	apr = pull --rebase
 	pr = pull --rebase
 	di = diff
 	ci = commit
 	st = status
+	stat = status
 	co = checkout
 	fap = fetch --all --prune
 	logs = log --topo-order --decorate --stat
