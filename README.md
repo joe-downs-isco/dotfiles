@@ -1,21 +1,6 @@
-# Hello world!
+#Joe Downs Dotfiles
 
-This is a [GitHub Markdown](https://guides.github.com/features/mastering-markdown/) file.
 
-You can do *italics* and **boldface**. ~~__Is this underline?__~~
-
-*No underlining in markdown :(*
-
-But we have [links](https://i.imgur.com/yChNWkg.png)
-
-## Here's a subsection.
-
-There may be no underlining, but:
-
-* You can do bullet lists
-* And here's another bullet
-
-1. You can also do numbered lists
-1. Here's another number
-
-Wow, I'm making an edit on my iPad. *Amazing*
+###To Do:
+1. Add color to terminal customization
+1. Program to automatically remove original ```.bashrc``` file and create symlink to mine on clone / pull(?)
