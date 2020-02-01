@@ -19,3 +19,5 @@
 	com = commit
 [core]
 	editor = emacs
+[commit]
+	template = /home/joe/git/dotfiles/.gitmessage.txt
