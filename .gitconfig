@@ -19,5 +19,6 @@
 	com = commit
 [core]
 	editor = emacs
+	excludesFile = /home/joe/git/dotfiles/.gitignore
 [commit]
 	template = /home/joe/git/dotfiles/.gitmessage.txt
