@@ -1,2 +1,5 @@
 # Ignore emacs' autosave files
 *~
+
+# Ignore other backup / autosave files
+\#*\#
