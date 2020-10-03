@@ -4,6 +4,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -20,3 +21,24 @@
  '(font-lock-string-face ((t (:foreground "color-168"))))
  '(font-lock-type-face ((t (:foreground "cyan"))))
  '(minibuffer-prompt ((t (:foreground "brightcyan")))))
+
+; Add $HOME/dotfiles/emacs to the load path
+(setq home-emacs-d (expand-file-name "~/git/dotfiles/emacs/"))
+(if (file-exists-p home-emacs-d)
+    (setq load-path
+	  (append
+	   (list home-emacs-d) load-path))
+  nil)
+
+;
+; Load the linum mode
+; http://stud4.tuwien.ac.at/~e0225855/linum/linum.html
+;
+
+(setq line-number-mode t)
+(require 'linum)
+(setq linum-format "%d ")
+(global-linum-mode 1)
+; Don't put line numbers in all modes; e.g., we don't need it in
+; *scratch*.  And line numbers really confuse gdb mode.
+(require 'linum-off)
