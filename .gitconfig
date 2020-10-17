@@ -13,7 +13,7 @@
 	co = checkout
 	fap = fetch --all --prune
 	logs = log --topo-order --decorate --stat
-	graph = log --graph --decorate --abbrev-commit --pretty=oneline
+	graph = log --graph --decorate --abbrev-commit --pretty=oneline --max-count=10
 	grapha = log --graph --decorate --abbrev-commit --pretty=oneline --all
 	dw = diff --word-diff
 	com = commit
