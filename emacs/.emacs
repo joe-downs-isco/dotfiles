@@ -24,11 +24,14 @@
 
 ; Add $HOME/dotfiles/emacs to the load path
 (setq home-emacs-d (expand-file-name "~/git/dotfiles/emacs/"))
-(if (file-exists-p home-emacs-d)
-    (setq load-path
-	  (append
-	   (list home-emacs-d) load-path))
-  nil)
+(if (file-exists-p home-emacs-d) (setq load-path (append (list home-emacs-d) load-path)) nil)
+
+
+; Create any and all backups / autosave files in their own, separate directories
+(setq backup-by-copying t)
+(setq backup-directory-alist '((".*". "~/.emacs.d/backups/")))
+(setq auto-save-file-name '((".*". "~/.emacs.d/autosaves/")))
+
 
 ;
 ; Load the linum mode
