@@ -12,3 +12,5 @@ export PS1="\[\e[1;32m\][\T]\[\e[0;33m\]\u@\H:\[\e[31m\]\w\[\e[0m\]
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
