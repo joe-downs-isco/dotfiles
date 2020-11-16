@@ -20,7 +20,8 @@
  '(font-lock-keyword-face ((t (:foreground "color-134"))))
  '(font-lock-string-face ((t (:foreground "color-168"))))
  '(font-lock-type-face ((t (:foreground "cyan"))))
- '(minibuffer-prompt ((t (:foreground "brightcyan")))))
+ '(minibuffer-prompt ((t (:foreground "brightcyan"))))
+ '(web-mode-html-tag-bracket-face ((t (:foreground "white")))))
 
 ; Add $HOME/dotfiles/emacs to the load path
 (setq home-emacs-d (expand-file-name "~/git/dotfiles/emacs/"))
@@ -45,3 +46,16 @@
 ; Don't put line numbers in all modes; e.g., we don't need it in
 ; *scratch*.  And line numbers really confuse gdb mode.
 (require 'linum-off)
+
+; Load web-mode
+; https://web-mode.org/
+; All code copied from the website's "Install" section
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
