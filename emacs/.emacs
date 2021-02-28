@@ -3,6 +3,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (wucuo)))
  '(scroll-down-aggressively 0.25)
  '(scroll-margin 5))
 
@@ -68,3 +69,7 @@
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+;; Use wucuo
+(add-hook 'prog-mode-hook 'wucuo-start)
+(add-hook 'text-mode-hook 'wucuo-start)
