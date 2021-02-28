@@ -14,7 +14,7 @@
 
 ## Emacs Packages
 These packages are all (currently) downloaded from [**MELPA**](https://melpa.org/), but
-a link to the packages respective repository is also given if applicable.
+a link to the packages' respective repository is also given if applicable.
 
 Name | Archive | Repo 
 -----|:-------:|:-----:
