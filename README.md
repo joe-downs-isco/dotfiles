@@ -1,6 +1,23 @@
-# Joe Downs Dotfiles
+# Downs' Dotfiles
+
+### Table of Contents
+[Linux Packages](http://github.com/Joe-Downs/dotfiles#linux-packages)
+
+[Emacs Packages](http://github.com/Joe-Downs/dotfiles#emacs-packages)
 
 
-### To Do:
-1. Add color to terminal customization
-1. Program to automatically remove original ```.bashrc``` file and create symlink to mine on clone / pull(?)
+## Linux Packages
+- emacs-nox
+- git
+- bash
+- python3
+
+## Emacs Packages
+These packages are all (currently) downloaded from [**MELPA**](https://melpa.org/), but
+a link to the packages respective repository is also given if applicable.
+
+Name | Archive | Repo 
+-----|:-------:|:-----:
+gh-md | [MELPA](https://melpa.org/#/gh-md) | [GitHub](https://github.com/emacsorphanage/gh-md)
+
+
