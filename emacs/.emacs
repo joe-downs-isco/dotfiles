@@ -4,7 +4,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
- '(package-selected-packages (quote (gh-md markdown-mode wucuo)))
+ '(package-selected-packages
+   (quote
+    (fill-column-indicator latex-extra gh-md markdown-mode wucuo)))
  '(scroll-down-aggressively 0.25)
  '(scroll-margin 5))
 
@@ -30,6 +32,15 @@
 (setq home-emacs-d (expand-file-name "~/git/dotfiles/emacs/"))
 (if (file-exists-p home-emacs-d) (setq load-path (append (list home-emacs-d) load-path)) nil)
 
+;; Puts a red line at column 81 (interior whitespace of 80) for more consistent formatting
+(add-hook 'after-change-major-mode-hook 'fci-mode)
+(setq fci-rule-column 80)
+(setq fci-rule-color "red")
+
+;; This will be available natively with display-fill-column-indicator as a part of Emacs 27
+;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Displaying-Boundaries.html
+;; (add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
+;; Code from https://emacs.stackexchange.com/a/50583
 
 ; Create any and all backups / autosave files in their own, separate directories
 (setq backup-by-copying t)
