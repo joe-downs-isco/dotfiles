@@ -10,6 +10,26 @@
  '(scroll-down-aggressively 0.25)
  '(scroll-margin 5))
 
+;; Enable installation of packages from MELPA (Milkypostman's Emacs Lisp Package Archive)
+;; Code below taken from https://melpa.org/#/getting-started
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
+;; and `package-pinned-packages`. Most users will not need or want to do this.
+;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(package-initialize)
+
+;;; Check if ~/.emacs.d/elpa exists, if not refresh the package list
+(setq home-elpa-d (expand-file-name "~/.emacs.d/elpa/"))
+(if (file-directory-p home-elpa-d)
+    (message "%s exists; no need to refresh packages" home-elpa-d)
+  (package-refresh-contents))
+
+;;; Installs the packages in the list package-selected-packages (set above at
+;;; beginning of file in (custom-set-variables)). To interactively add more
+;;; packages to this list use M-x package-list-packages
+(mapc 'package-install package-selected-packages)
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -47,14 +67,6 @@
 (setq backup-directory-alist '((".*". "~/.emacs.d/backups/")))
 (setq auto-save-file-name '((".*". "~/.emacs.d/autosaves/")))
 
-;; Enable installation of packages from MELPA (Milkypostman's Emacs Lisp Package Archive)
-;; Code below taken from https://melpa.org/#/getting-started
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-;; Comment/uncomment this line to enable MELPA Stable if desired.  See `package-archive-priorities`
-;; and `package-pinned-packages`. Most users will not need or want to do this.
-;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-(package-initialize)
 
 ;
 ; Load the linum mode
