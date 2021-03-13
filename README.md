@@ -13,8 +13,9 @@
 - python3
 
 ## Emacs Packages
-These packages are all (currently) downloaded from [**MELPA**](https://melpa.org/), but
-a link to the packages' respective repository is also given if applicable.
+These packages are all (currently) downloaded from
+[**MELPA**](https://melpa.org/), but a link to the packages' respective
+repository is also given if applicable.
 
 Name | Archive | Repo 
 -----|:-------:|:-----:
