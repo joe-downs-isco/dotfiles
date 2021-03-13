@@ -23,7 +23,7 @@ fill-column-indicator | [MELPA](https://melpa.org/#/fill-column-indicator) | [Gi
 gh-md | [MELPA](https://melpa.org/#/gh-md) | [GitHub](https://github.com/emacsorphanage/gh-md)
 latex-extra | [MELPA](https://melpa.org/#/latex-extra) | [GitHub](https://github.com/Malabarba/latex-extra)
 linum-off | [MELPA](https://melpa.org/#/linum-off) | [GitHub](https://github.com/mattfidler/linum-off)
-markdown-mode | [MELPA](https://melpa.org/#/markdown-mode) | [GitHub](https://github.com/jrblevin/markdown-mode)\
+markdown-mode | [MELPA](https://melpa.org/#/markdown-mode) | [GitHub](https://github.com/jrblevin/markdown-mode)
 web-mode | [MELPA](https://melpa.org/#/web-mode) | [GitHub](https://github.com/fxbois/web-mode)
 wucuo | [MELPA](https://melpa.org/#/wucuo) | [GitHub](https://github.com/redguardtoo/wucuo)
 
