@@ -83,5 +83,5 @@
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
 ;; Use wucuo
-(add-hook 'prog-mode-hook 'wucuo-start)
-(add-hook 'text-mode-hook 'wucuo-start)
+(add-hook 'after-change-major-mode-hook 'wucuo-start)
+;;(add-hook 'text-mode-hook 'wucuo-start)
