@@ -9,7 +9,9 @@
    (quote
     (web-mode linum-off fill-column-indicator latex-extra gh-md markdown-mode wucuo)))
  '(scroll-down-aggressively 0.25)
- '(scroll-margin 5))
+ '(scroll-margin 5)
+ '(send-mail-function (quote smtpmail-send-it))
+ '(tool-bar-mode nil))
 
 ;; Enable installation of packages from MELPA (Milkypostman's Emacs Lisp Package Archive)
 ;; Code below taken from https://melpa.org/#/getting-started
@@ -36,6 +38,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 98 :width normal))))
  '(custom-group-tag ((t (:inherit variable-pitch :foreground "color-184" :weight bold :height 1.2))))
  '(custom-variable-tag ((t (:foreground "color-130" :weight bold))))
  '(font-lock-builtin-face ((t (:foreground "color-96"))))
