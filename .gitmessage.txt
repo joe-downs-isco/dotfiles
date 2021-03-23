@@ -1,5 +1,5 @@
 
-##################################################################### (GitHub MAX: 69 char)
-################################################## (Recommended: 50 char)
+#GitHub MAX: 69 char#################################################
+#Recommended: 50 char#############################
 
 #Anything after an empty line will NOT be shown in git log --oneline
