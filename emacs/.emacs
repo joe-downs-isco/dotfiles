@@ -41,6 +41,7 @@
  '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 98 :width normal))))
  '(custom-group-tag ((t (:inherit variable-pitch :foreground "color-184" :weight bold :height 1.2))))
  '(custom-variable-tag ((t (:foreground "color-130" :weight bold))))
+ '(font-latex-sectioning-5-face ((t (:foreground "color-51" :weight bold))))
  '(font-lock-builtin-face ((t (:foreground "color-96"))))
  '(font-lock-comment-delimiter-face ((t (:inherit font-lock-comment-face))))
  '(font-lock-comment-face ((t (:foreground "color-70"))))
