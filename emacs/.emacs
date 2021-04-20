@@ -7,7 +7,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (banner-comment auctex web-mode linum-off fill-column-indicator latex-extra gh-md markdown-mode wucuo)))
+    (json-mode banner-comment auctex web-mode linum-off fill-column-indicator latex-extra gh-md markdown-mode wucuo)))
  '(scroll-down-aggressively 0.25)
  '(scroll-margin 5)
  '(send-mail-function (quote smtpmail-send-it))
