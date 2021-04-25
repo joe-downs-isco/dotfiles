@@ -38,4 +38,7 @@ fi
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
 
+# Add thefuck alias for correcting typos in command calls
+eval $(thefuck --alias)
+
 fortune | cowsay -f tux -n
