@@ -51,6 +51,16 @@
  '(font-lock-string-face ((t (:foreground "color-168"))))
  '(font-lock-type-face ((t (:foreground "cyan"))))
  '(minibuffer-prompt ((t (:foreground "brightcyan"))))
+ '(org-formula ((t (:foreground "color-77"))))
+ '(org-table ((t (:foreground "brightblue"))))
+ '(outline-1 ((t (:foreground "color-219"))))
+ '(outline-2 ((t (:foreground "color-210"))))
+ '(outline-3 ((t (:foreground "color-180"))))
+ '(outline-4 ((t (:foreground "color-108"))))
+ '(outline-5 ((t (:foreground "color-117"))))
+ '(outline-6 ((t (:foreground "color-69"))))
+ '(outline-7 ((t (:foreground "color-99"))))
+ '(outline-8 ((t (:foreground "color-134"))))
  '(web-mode-html-tag-bracket-face ((t (:foreground "white")))))
 
 ; Add $HOME/dotfiles/emacs to the load path
