@@ -18,7 +18,7 @@
 	dw = diff --word-diff
 	com = commit
 [core]
-	editor = emacs
+	editor = emacs -nw
 	excludesFile = /home/joe/git/dotfiles/.gitignore
 [commit]
 	template = /home/joe/git/dotfiles/.gitmessage.txt
