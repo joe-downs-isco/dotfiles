@@ -7,7 +7,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (yaml yaml-mode json-mode banner-comment auctex web-mode linum-off fill-column-indicator latex-extra gh-md markdown-mode wucuo)))
+    (company yaml yaml-mode json-mode banner-comment auctex web-mode linum-off fill-column-indicator latex-extra gh-md markdown-mode wucuo)))
  '(scroll-down-aggressively 0.25)
  '(scroll-margin 5)
  '(send-mail-function (quote smtpmail-send-it))
@@ -82,6 +82,14 @@
 (setq backup-directory-alist '((".*". "~/.emacs.d/backups/")))
 (setq auto-save-file-name '((".*". "~/.emacs.d/autosaves/")))
 
+;; Use company-mode (autocompletion) everywhere
+(add-hook 'after-init-hook 'global-company-mode)
+;; No delay in showing suggestions.
+(setq company-idle-delay 0)
+;; Show suggestions after entering one character.
+(setq company-minimum-prefix-length 1)
+;; Wrap around to the top after reaching the bottom of the suggestion list.
+(setq company-selection-wrap-around t)
 
 ;
 ; Load the linum mode
