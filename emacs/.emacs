@@ -7,7 +7,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (company yaml yaml-mode json-mode banner-comment auctex web-mode linum-off fill-column-indicator latex-extra gh-md markdown-mode wucuo)))
+    (company-fuzzy company-c-headers company yaml yaml-mode json-mode banner-comment auctex web-mode linum-off fill-column-indicator latex-extra gh-md markdown-mode wucuo)))
  '(scroll-down-aggressively 0.25)
  '(scroll-margin 5)
  '(send-mail-function (quote smtpmail-send-it))
@@ -90,6 +90,13 @@
 (setq company-minimum-prefix-length 1)
 ;; Wrap around to the top after reaching the bottom of the suggestion list.
 (setq company-selection-wrap-around t)
+;; Use tab key to cycle through suggestions. ('tng' means 'tab and go')
+(company-tng-configure-default)
+
+;; Initialize backends for different company-related packages AFTER company has
+;; loaded, so that this variable actually exists.
+(eval-after-load 'company
+  '(add-to-list 'company-backends 'company-c-headers))
 
 ;
 ; Load the linum mode
