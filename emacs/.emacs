@@ -3,6 +3,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(display-fill-column-indicator-character 124)
  '(fill-column 80)
  '(inhibit-startup-screen t)
  '(package-selected-packages
@@ -40,6 +41,7 @@
  '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 98 :width normal))))
  '(custom-group-tag ((t (:inherit variable-pitch :foreground "color-184" :weight bold :height 1.2))))
  '(custom-variable-tag ((t (:foreground "color-130" :weight bold))))
+ '(fill-column-indicator ((t (:foreground "red"))))
  '(font-latex-sectioning-5-face ((t (:foreground "color-51" :weight bold))))
  '(font-lock-builtin-face ((t (:foreground "color-96"))))
  '(font-lock-comment-delimiter-face ((t (:inherit font-lock-comment-face))))
@@ -66,15 +68,17 @@
 (setq home-emacs-d (expand-file-name "~/git/dotfiles/emacs/"))
 (if (file-exists-p home-emacs-d) (setq load-path (append (list home-emacs-d) load-path)) nil)
 
-;; Puts a red line at column 81 (interior whitespace of 80) for more consistent formatting
-(add-hook 'after-change-major-mode-hook 'fci-mode)
-(setq fci-rule-column 80)
-(setq fci-rule-color "red")
-
-;; This will be available natively with display-fill-column-indicator as a part of Emacs 27
-;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Displaying-Boundaries.html
-;; (add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
-;; Code from https://emacs.stackexchange.com/a/50583
+;; A fill column indicator is available natively as a part of Emacs 27. If
+;; running version 26 or below, instead use fill-column-indicator. Regardless of
+;; which is used, both will put a vertical red bar "|" at column 81 (interior
+;; width of 80).
+(if (version< emacs-version "27")
+    (progn
+      (message "Emacs version is below 27, using fill-column-indicator")
+      (add-hook 'after-change-major-mode-hook 'fci-mode)
+      (setq fci-rule-column fill-column)
+      (setq fci-rule-color "red"))
+  (add-hook 'after-change-major-mode-hook 'display-fill-column-indicator-mode))
 
 ; Create any and all backups / autosave files in their own, separate directories
 (setq backup-by-copying t)
