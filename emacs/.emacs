@@ -6,11 +6,10 @@
  '(fill-column 80)
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   (quote
-    (company-fuzzy company-c-headers company yaml yaml-mode json-mode banner-comment auctex web-mode linum-off fill-column-indicator latex-extra gh-md markdown-mode wucuo)))
+   '(rainbow-identifiers rainbow-delimiters company-fuzzy company-c-headers company yaml yaml-mode json-mode banner-comment auctex web-mode linum-off fill-column-indicator latex-extra gh-md markdown-mode wucuo))
  '(scroll-down-aggressively 0.25)
  '(scroll-margin 5)
- '(send-mail-function (quote smtpmail-send-it))
+ '(send-mail-function 'smtpmail-send-it)
  '(tool-bar-mode nil))
 
 ;; Enable installation of packages from MELPA (Milkypostman's Emacs Lisp Package Archive)
@@ -110,6 +109,10 @@
 ; Don't put line numbers in all modes; e.g., we don't need it in
 ; *scratch*.  And line numbers really confuse gdb mode.
 (require 'linum-off)
+
+;; Turn on rainbow-related modes for most programming modes
+(add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 ; Load web-mode
 ; https://web-mode.org/
