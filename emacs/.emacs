@@ -8,10 +8,14 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    '(rainbow-identifiers rainbow-delimiters company-fuzzy company-c-headers company yaml yaml-mode json-mode banner-comment auctex web-mode linum-off fill-column-indicator latex-extra gh-md markdown-mode wucuo))
+ '(save-place-mode t)
  '(scroll-down-aggressively 0.25)
  '(scroll-margin 5)
  '(send-mail-function 'smtpmail-send-it)
- '(tool-bar-mode nil))
+ '(show-paren-mode t)
+ '(tool-bar-mode nil)
+ '(truncate-lines t)
+ '(truncate-partial-width-windows nil))
 
 ;; Enable installation of packages from MELPA (Milkypostman's Emacs Lisp Package Archive)
 ;; Code below taken from https://melpa.org/#/getting-started
