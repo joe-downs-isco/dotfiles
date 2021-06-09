@@ -2,8 +2,11 @@
 (setq home-emacs-d (expand-file-name "~/git/dotfiles/emacs/"))
 (if (file-exists-p home-emacs-d) (setq load-path (append (list home-emacs-d) load-path)) nil)
 
-;; Load custom.el (settings set by emacs for faces, behavior, etc.)
-(load "custom.el")
+;; Set and load the custom file (custom.el) to save settings set by emacs for
+;; faces, behavior, etc. custom-file must be set so Emacs knows where to save
+;; the customizations and doesn't just dump them back here in .emacs.
+(setq custom-file "custom.el")
+(load custom-file)
 
 ;; Enable installation of packages from MELPA (Milkypostman's Emacs Lisp Package Archive)
 ;; Code below taken from https://melpa.org/#/getting-started
