@@ -3,6 +3,7 @@
 	email = joedowns502@gmail.com
 
 [alias]
+	commit = commit --signoff
 	ad = add
 	apr = pull --rebase
 	pr = pull --rebase
