@@ -3,7 +3,6 @@
 	email = joedowns502@gmail.com
 
 [alias]
-	commit = commit --signoff
 	ad = add
 	apr = pull --rebase
 	pr = pull --rebase
@@ -17,7 +16,7 @@
 	graph = log --graph --decorate --abbrev-commit --pretty=oneline --max-count=10
 	grapha = log --graph --decorate --abbrev-commit --pretty=oneline --all
 	dw = diff --word-diff
-	com = commit
+	com = commit --signoff
 [core]
 	editor = emacs -nw
 	excludesFile = /home/joe/git/dotfiles/.gitignore
