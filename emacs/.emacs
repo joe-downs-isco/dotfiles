@@ -9,6 +9,11 @@
 (setq custom-file "custom.el")
 (load custom-file)
 
+;; Set and load the keybindings file (keybinds.el) for all my custom-set
+;; keyboard shortcuts
+(setq keybinds-file "keybinds.el")
+(load keybinds-file)
+
 ;; Enable installation of packages from MELPA (Milkypostman's Emacs Lisp Package
 ;; Archive). Code below taken from https://melpa.org/#/getting-started
 (require 'package)
