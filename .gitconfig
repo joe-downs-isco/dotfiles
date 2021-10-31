@@ -9,6 +9,7 @@
 	di = diff
 	ci = commit
 	st = status
+	sts = status --short
 	stat = status
 	co = checkout
 	fap = fetch --all --prune
