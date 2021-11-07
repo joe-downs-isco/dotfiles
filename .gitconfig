@@ -23,3 +23,5 @@
 	excludesFile = /home/joe/git/dotfiles/.gitignore
 [commit]
 	template = /home/joe/git/dotfiles/.gitmessage.txt
+[init]
+	defaultBranch = main
