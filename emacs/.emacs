@@ -6,12 +6,12 @@
 ;; Set and load the custom file (custom.el) to save settings set by emacs for
 ;; faces, behavior, etc. custom-file must be set so Emacs knows where to save
 ;; the customizations and doesn't just dump them back here in .emacs.
-(setq custom-file "custom.el")
+(setq custom-file (concat home-emacs-d "custom.el"))
 (load custom-file)
 
 ;; Set and load the keybindings file (keybinds.el) for all my custom-set
 ;; keyboard shortcuts
-(setq keybinds-file "keybinds.el")
+(setq keybinds-file (concat home-emacs-d "keybinds.el"))
 (load keybinds-file)
 
 ;; Enable installation of packages from MELPA (Milkypostman's Emacs Lisp Package
