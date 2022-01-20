@@ -6,8 +6,9 @@
  '(display-fill-column-indicator-character 124)
  '(fill-column 80)
  '(inhibit-startup-screen t)
+ '(org-support-shift-select t)
  '(package-selected-packages
-   '(rainbow-identifiers rainbow-delimiters company-fuzzy company-c-headers company yaml yaml-mode json-mode banner-comment auctex web-mode linum-off fill-column-indicator latex-extra gh-md markdown-mode wucuo))
+   '(magit fzf rainbow-identifiers rainbow-delimiters company-fuzzy company-c-headers company yaml yaml-mode json-mode banner-comment auctex web-mode linum-off fill-column-indicator latex-extra gh-md markdown-mode wucuo))
  '(save-place-mode t)
  '(scroll-down-aggressively 0.25)
  '(scroll-margin 5)
