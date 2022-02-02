@@ -36,6 +36,8 @@
  '(font-lock-keyword-face ((t (:foreground "color-134"))))
  '(font-lock-string-face ((t (:foreground "color-168"))))
  '(font-lock-type-face ((t (:foreground "cyan"))))
+ '(magit-hash ((t (:foreground "yellow"))))
+ '(magit-section-highlight ((t (:extend t :background "color-27"))))
  '(minibuffer-prompt ((t (:foreground "brightcyan"))))
  '(org-formula ((t (:foreground "color-77"))))
  '(org-table ((t (:foreground "brightblue"))))
