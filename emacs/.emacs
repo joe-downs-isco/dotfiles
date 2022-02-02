@@ -111,3 +111,8 @@
 ;; Use wucuo
 (add-hook 'after-change-major-mode-hook 'wucuo-start)
 ;;(add-hook 'text-mode-hook 'wucuo-start)
+
+;;; Magit Customization
+;; Auto-refresh Magit status buffer after saving a file
+(with-eval-after-load 'magit-mode
+  (add-hook 'after-save-hook 'magit-after-save-refresh-status t))
