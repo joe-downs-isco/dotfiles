@@ -1,3 +1,4 @@
+;;; Emacs Setup
 ;; Add $HOME/git/dotfiles/emacs to the load path
 (setq home-emacs-d (expand-file-name "~/git/dotfiles/emacs/"))
 (if (file-exists-p home-emacs-d)
@@ -68,6 +69,8 @@
 ;; (setq backup-by-copying t)
 ;; (setq backup-directory-alist '((".*". "~/.emacs.d/backups/")))
 ;; (setq auto-save-file-name '((".*". "~/.emacs.d/autosaves/")))
+
+;;; Package Customization
 
 ;; Use company-mode (autocompletion) everywhere
 (add-hook 'after-init-hook 'global-company-mode)
