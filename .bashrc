@@ -5,12 +5,15 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-
 if [ $USER == "root" ]; then
     prompt_char="#"
 else
     prompt_char="$"
 fi
+
+# Force the terminal mode to fix tmux and GNU screen causing emacs to show
+# colors incorrectly.
+export TERM=xterm-256color
 
 export PS1="\[\e[1;32m\][\T]\[\e[0;33m\]\u@\H:\[\e[31m\]\w\[\e[0m\]
 \[\e[1;36m\]$prompt_char\[\e[0m\] "
