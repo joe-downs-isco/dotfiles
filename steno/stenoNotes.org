@@ -1,0 +1,33 @@
+* The Layout
+** Top Row
+   Briefs:
+   | Chord     | Becomes |
+   |-----------+---------|
+   | S-        | is      |
+   | T-        | it      |
+   | H-        | had     |
+   | U         | you     |
+   | -F        | of      |
+   | -T        | the     |
+   | TP-PL     | {,}     |
+   | H-F       | {?}     |
+   | STPH-FPLT | {;}     |
+*** Excercises
+    **Steno to English**
+    1. -T HUL S TUF TP-PL
+    2. -T HUL S TUF TP-PL
+    3. TAP -T SAP TP-PL
+    4. 4. PUL -T HUL TP-PL
+    5. -T PAL H H T TP-PL
+    6. S -T PUP TUF H-F
+    7. U STPH-FPLT PUL -T TUF PUP TP-PL
+    8. -T HUT H HAF -F -T SALT TP-PL
+    9. U H STAF H-F
+    10. -T STAF SAT TP-PL
+
+    **English to Steno**
+    1. The hull is tough.
+    2. You sat.
+    3. Halt: pull it.
+    4. Is it half sap?
+    5. It is the shaft.
