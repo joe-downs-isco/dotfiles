@@ -50,6 +50,15 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# If we're on Linux, alias 'xdg-open' to be just 'open'. This is hopefully to
+# avoid breaking it on Mac, since they have 'open' by default (if I ever even go
+# on one...). Bash gives us the variable, $OSTYPE so we'll check if that is
+# "linux-gnu"
+if [ $OSTYPE == "linux-gnu" ]; then
+    alias open='xdg-open'
+fi
+
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
