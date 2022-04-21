@@ -23,6 +23,9 @@ if [ -x ~/go ]; then
     export GOPATH="~/go"
 fi
 
+# Add ~/.emacs.d/bin to the $PATH so that we can call 'doom' directly
+export PATH=$HOME/.emacs.d/bin:$PATH
+
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
