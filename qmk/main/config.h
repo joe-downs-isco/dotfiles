@@ -20,6 +20,12 @@
 #    define STARTUP_SONG SONG(PREONIC_SOUND)
 // #define STARTUP_SONG SONG(NO_SOUND)
 
+/*
+ * Fix for sound not working
+ * (https://github.com/qmk/qmk_firmware/issues/14242#issuecomment-950788068)
+ */
+#define AUDIO_INIT_DELAY
+
 #    define DEFAULT_LAYER_SONGS \
         { SONG(QWERTY_SOUND), SONG(COLEMAK_SOUND), SONG(DVORAK_SOUND) }
 #endif
@@ -48,3 +54,4 @@
 //#define MIDI_TONE_KEYCODE_OCTAVES 2
 
 #define FORCE_NKRO
+
