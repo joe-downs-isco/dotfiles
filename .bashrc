@@ -61,6 +61,10 @@ if [ $OSTYPE == "linux-gnu" ]; then
     alias open='xdg-open'
 fi
 
+# Alias a command "weather" to do `curl wttr.in?mF` (get the weather for my
+# current location in metric and don't add the 'follow' line)
+# https://wttr.in/:help.
+alias weather="curl wttr.in?mF"
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
