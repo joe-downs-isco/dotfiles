@@ -26,6 +26,10 @@ fi
 # Add ~/.emacs.d/bin to the $PATH so that we can call 'doom' directly
 export PATH=$HOME/.emacs.d/bin:$PATH
 
+# Add ~/git/dotfiles/shell to the path so we can call our custom scripts
+# directly.
+export PATH=$HOME/git/dotfiles/shell:$PATH
+
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
