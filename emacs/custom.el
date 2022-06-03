@@ -24,7 +24,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 98 :width normal))))
+ '(default ((t (:inherit nil :extend nil :stipple nil :background "#232627" :foreground "#fcfcfc" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
  '(custom-group-tag ((t (:inherit variable-pitch :foreground "#d7d700" :weight bold :height 1.2))))
  '(custom-variable-tag ((t (:foreground "#af5f00" :weight bold))))
  '(fill-column-indicator ((t (:foreground "#cd0000"))))
