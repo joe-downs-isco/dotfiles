@@ -6,6 +6,7 @@
  '(bibtex-comment-start "%")
  '(display-fill-column-indicator-character 124)
  '(fill-column 80)
+ '(fringe-mode 0 nil (fringe))
  '(inhibit-startup-screen t)
  '(org-support-shift-select t)
  '(package-selected-packages
