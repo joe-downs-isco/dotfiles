@@ -100,7 +100,7 @@
 (require 'linum-off)
 
 ;; Turn on rainbow-related modes for most programming modes
-(add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
+;;(add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 ;; Load web-mode. Code below taken from https://web-mode.org/
