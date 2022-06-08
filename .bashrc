@@ -70,6 +70,9 @@ fi
 # https://wttr.in/:help.
 alias weather="curl wttr.in?mF"
 
+# Alias a command to get the current timestamp in YYYY-MM-DD-hhmmss format
+alias timestamp="date +%F-%H%M%S"
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
