@@ -91,6 +91,9 @@
 (eval-after-load 'company
   '(add-to-list 'company-backends 'company-c-headers))
 
+;; Turn off company-dabbrev downcasing (e.g., turning "fooBar" to "foobar")
+(setq company-dabbrev-downcase nil)
+
 ;; Enable linum mode for smartly adding line numbers to buffers.
 (setq line-number-mode t)
 (setq linum-format "%d ")
