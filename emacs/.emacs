@@ -121,6 +121,10 @@
 (add-hook 'after-change-major-mode-hook 'wucuo-start)
 ;;(add-hook 'text-mode-hook 'wucuo-start)
 
+;; Use anaconda and anaconda-eldoc-mode
+(add-hook 'python-mode-hook 'anaconda-mode)
+(add-hook 'python-mode-hook 'anaconda-eldoc-mode)
+
 ;;; Magit Customization
 ;; Auto-refresh Magit status buffer after saving a file
 (with-eval-after-load 'magit-mode
