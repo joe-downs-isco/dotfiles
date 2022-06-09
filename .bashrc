@@ -80,22 +80,21 @@ HISTCONTROL=ignoreboth
 # Add thefuck alias for correcting typos in command calls
 eval $(thefuck --alias)
 
+print_motd=1
+# Programs that need to be installed for the MOTD to work correctly
+motd_deps="cowsay figlet fortune lolcat"
 
-# Test if cowsay, figlet, and fortune are installed. If any of them are not,
-# notify the user and do not output the typical welcome / MOTD. If they are
-# installed, do nothing and output the welcome / MOTD.
-if [ -x /usr/games/cowsay ] && [ -x /usr/bin/figlet ] && [ -x /usr/games/fortune ]; then
-    # Get block letters for
-    # "Welcome", add a fortune cookie to the end and pipe that output through cowsay
-    # with tux, which is consequently piped through lolcat for crazy colors, if
-    # lolcat exists, if not just print it out.
-    if [ -x /snap/bin/lolcat ]; then
-	(figlet -c Welcome; fortune) | cowsay -f tux -n | lolcat
-    else
-	(figlet -c Welcome; fortune) | cowsay -f tux -n
+for dep in $motd_deps; do
+    if [[ `type -t $dep` != "file" ]]; then
+	# If a command isn't installed, set the variable to false; i.e., don't
+	# print out the MOTD
+	print_motd=0
+	echo "$dep is missing"
     fi
+done
+
+if [[ $print_motd -eq 1 ]]; then
+    (figlet -c Welcome; fortune) | cowsay -f tux -n | lolcat
 else
-    echo
-    echo "cowsay, figlet, or fortune is missing!"
-    echo
+    echo "Couldn't print the MOTD"
 fi
