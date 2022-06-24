@@ -10,7 +10,7 @@
  '(inhibit-startup-screen t)
  '(org-support-shift-select t)
  '(package-selected-packages
-   '(company-anaconda anaconda-mode bibtex-utils gemini-mode elpher magit fzf rainbow-identifiers rainbow-delimiters company-fuzzy company-c-headers company yaml yaml-mode json-mode banner-comment auctex web-mode linum-off fill-column-indicator latex-extra gh-md markdown-mode wucuo))
+   '(org-roam company-anaconda anaconda-mode bibtex-utils gemini-mode elpher magit fzf rainbow-identifiers rainbow-delimiters company-fuzzy company-c-headers company yaml yaml-mode json-mode banner-comment auctex web-mode linum-off fill-column-indicator latex-extra gh-md markdown-mode wucuo))
  '(save-place-mode t)
  '(scroll-bar-mode nil)
  '(scroll-down-aggressively 0.25)
