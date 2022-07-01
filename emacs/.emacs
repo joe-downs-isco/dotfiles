@@ -177,3 +177,7 @@
 (helm-autoresize-mode 1)
 
 (helm-mode 1)
+
+;;;; Elcord (Discord rich presence integration)
+(require 'elcord)
+(elcord-mode)
