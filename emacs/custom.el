@@ -5,12 +5,13 @@
  ;; If there is more than one, they won't work right.
  '(bibtex-comment-start "%")
  '(display-fill-column-indicator-character 124)
+ '(elcord-refresh-rate 5)
  '(fill-column 80)
  '(fringe-mode 0 nil (fringe))
  '(inhibit-startup-screen t)
  '(org-support-shift-select t)
  '(package-selected-packages
-   '(helm use-package org-roam company-anaconda anaconda-mode bibtex-utils gemini-mode elpher magit fzf rainbow-identifiers rainbow-delimiters company-fuzzy company-c-headers company yaml yaml-mode json-mode banner-comment auctex web-mode linum-off fill-column-indicator latex-extra gh-md markdown-mode wucuo))
+   '(elcord helm use-package org-roam company-anaconda anaconda-mode bibtex-utils gemini-mode elpher magit fzf rainbow-identifiers rainbow-delimiters company-fuzzy company-c-headers company yaml yaml-mode json-mode banner-comment auctex web-mode linum-off fill-column-indicator latex-extra gh-md markdown-mode wucuo))
  '(save-place-mode t)
  '(scroll-bar-mode nil)
  '(scroll-down-aggressively 0.25)
