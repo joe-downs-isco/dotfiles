@@ -181,3 +181,6 @@
 ;;;; Elcord (Discord rich presence integration)
 (require 'elcord)
 (elcord-mode)
+
+;;;; Diredfl
+(add-hook 'dired-mode-hook 'diredfl-mode)
