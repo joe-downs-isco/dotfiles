@@ -8,6 +8,7 @@
  '(elcord-refresh-rate 5)
  '(fill-column 80)
  '(fringe-mode 0 nil (fringe))
+ '(helm-full-frame t)
  '(inhibit-startup-screen t)
  '(org-support-shift-select t)
  '(package-selected-packages
