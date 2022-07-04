@@ -183,4 +183,5 @@
 (elcord-mode)
 
 ;;;; Diredfl
+(require 'diredfl)
 (add-hook 'dired-mode-hook 'diredfl-mode)
