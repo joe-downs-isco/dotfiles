@@ -153,6 +153,16 @@
   ;; If using org-roam-protocol
   (require 'org-roam-protocol))
 
+;; Use a new default template for org-roam-captures. This just gives us the node
+;; name as the filename, instead of a loooong timestamp. I think my note-taking
+;; method (at least for now until I look into journaling and whatnot, I won't
+;; have nodes with the same name; instead just expanding on the current one.
+(setq org-roam-capture-templates
+      '(("d" "default" plain "%?"
+	 :target (file+head "${title}.org"
+                            "#+title: ${title}\n")
+	 :unnarrowed t)))
+
 ;;;; Helm Customization
 ;; Taken from https://tuhdo.github.io/helm-intro.html
 (require 'helm)
