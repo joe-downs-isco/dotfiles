@@ -130,6 +130,9 @@
 (with-eval-after-load 'magit-mode
   (add-hook 'after-save-hook 'magit-after-save-refresh-status t))
 
+;;;; org-mode Customization
+(setq org-adapt-indentation t)
+
 ;;; org-roam Customization
 ;; Sample Config from the git repo
 (use-package org-roam
