@@ -199,6 +199,9 @@
 ;; Save buffer when helm-multi-swoop-edit complete
 (setq helm-multi-swoop-edit-save t)
 
+;; Split direcion. 'split-window-vertically or 'split-window-horizontally
+(setq helm-swoop-split-direction 'split-window-horizontally)
+
 ;; ;; Go to the opposite side of line from the end or beginning of line
 (setq helm-swoop-move-to-line-cycle t)
 
