@@ -1,5 +1,5 @@
 #!/bin/bash
 
-for ark in $(ls ./*.zip); do
-    unar ${ark};
+for ark in ./*.zip ; do
+    unar "$ark";
 done
