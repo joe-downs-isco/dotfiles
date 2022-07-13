@@ -65,10 +65,6 @@
       auto-save-timeout 20              ; number of seconds idle time before auto-save (default: 30)
       auto-save-interval 200            ; number of keystrokes between auto-saves (default: 300)
       )
-;; OLD METHOD:
-;; (setq backup-by-copying t)
-;; (setq backup-directory-alist '((".*". "~/.emacs.d/backups/")))
-;; (setq auto-save-file-name '((".*". "~/.emacs.d/autosaves/")))
 
 ;; Show trailing whitespace only in programming and text modes (i.e., not in
 ;; minibuffers)
