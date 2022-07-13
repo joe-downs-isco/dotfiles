@@ -70,9 +70,11 @@
 ;; (setq backup-directory-alist '((".*". "~/.emacs.d/backups/")))
 ;; (setq auto-save-file-name '((".*". "~/.emacs.d/autosaves/")))
 
-;; Show trailing whitespace
-(setq-default show-trailing-whitespace t)
-
+;; Show trailing whitespace only in programming and text modes (i.e., not in
+;; minibuffers)
+(defun visible-whitespace () (setq show-trailing-whitespace t))
+(add-hook 'prog-mode-hook 'visible-whitespace)
+(add-hook 'text-mode-hook 'visible-whitespace)
 ;;; Package Customization
 
 ;; Use company-mode (autocompletion) everywhere
