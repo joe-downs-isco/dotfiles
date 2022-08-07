@@ -136,6 +136,16 @@
 (require 'diredfl)
 (add-hook 'dired-mode-hook 'diredfl-mode)
 
+;;; Projectile
+(require 'projectile)
+(setq helm-projectile-fuzzy-match nil)
+(require 'helm-projectile)
+(helm-projectile-on)
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+(setq projectile-project-search-path '("~/git/" "~/git/.dev/" "~/git/.installs"))
+(setq projectile-auto-discover t)
+
 ;;;; External Configs
 ;; Load separate config file for helm stuffs
 (setq helm-cfg-file (concat home-emacs-d "cfg-helm.el"))
