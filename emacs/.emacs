@@ -154,3 +154,6 @@
 ;; Org Stuffs
 (setq org-cfg-file (concat home-emacs-d "cfg-org.el"))
 (load org-cfg-file)
+;; Set a LaTeX packages to fix the horrible default margins
+(setq org-latex-packages-alist '(("" "fullpage")))
+
