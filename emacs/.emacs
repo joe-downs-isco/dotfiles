@@ -156,4 +156,6 @@
 (load org-cfg-file)
 ;; Set a LaTeX packages to fix the horrible default margins
 (setq org-latex-packages-alist '(("" "fullpage")))
+;; Hide markup characters (e.g., *foo* would just be foo [but bold])
+(setq org-hide-emphasis-markers t)
 
