@@ -4,6 +4,7 @@
 
 [alias]
 	ad = add
+	br = branch
 	apr = pull --rebase
 	pr = pull --rebase
 	di = diff
