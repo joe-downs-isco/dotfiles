@@ -159,3 +159,8 @@
 ;; Hide markup characters (e.g., *foo* would just be foo [but bold])
 (setq org-hide-emphasis-markers t)
 
+;;; LaTeX stuffs
+;; Turn off fontifying (e.g., making sub- and super-scripts smaller)
+(setq tex-fontify-script nil)
+(setq font-latex-fontify-script nil)
+
