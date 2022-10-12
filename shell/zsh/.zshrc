@@ -19,3 +19,25 @@ compinit
 # actually see what that new line is (it's off the screen.))
 NEWLINE=$'\n'
 PS1="%F{green}[%*]%F{yellow}%n@%m:%F{red}%~${NEWLINE}%F{cyan}%(!.#.$)%f "
+
+# A few special movement keys don't work in Zsh like they did in Bash Solution
+# from:
+# https://www.linuxquestions.org/questions/linux-software-2/ins-end-delete-keys-are-mischevious-297024/
+# Rebind HOME and END to do the decent thing:
+bindkey '\e[1~' beginning-of-line
+bindkey '\e[4~' end-of-line
+case $TERM in (xterm*)
+bindkey '\eOH' beginning-of-line
+bindkey '\eOF' end-of-line
+esac
+
+# To discover what keycode is being sent, hit ^v and then the key you want to
+# test.
+
+# And DEL too, as well as PGDN and insert:
+bindkey '\e[3~' delete-char
+bindkey '\e[6~' end-of-history
+bindkey '\e[2~' redisplay
+
+# Now bind pgup to paste the last word of the last command,
+bindkey '\e[5~' insert-last-word
