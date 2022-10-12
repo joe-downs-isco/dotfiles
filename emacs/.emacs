@@ -146,6 +146,15 @@
 (setq projectile-project-search-path '("~/git/" "~/git/.dev/" "~/git/.installs"))
 (setq projectile-auto-discover t)
 
+;;; Yasnippet
+(require 'yasnippet)
+;; Add our own custom snippets
+(setq yas-snippet-dirs (append (list (concat home-emacs-d "snippets")) (yas-snippet-dirs)))
+;; Enable yas-global-mode
+(yas-global-mode 1)
+
+
+
 ;;;; External Configs
 ;; Load separate config file for helm stuffs
 (setq helm-cfg-file (concat home-emacs-d "cfg-helm.el"))
