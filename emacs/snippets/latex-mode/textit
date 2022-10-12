@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+# name: Text Italic
+# --
+\textit{$1}$0
