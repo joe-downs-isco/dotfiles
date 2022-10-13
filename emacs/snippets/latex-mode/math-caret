@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+# name: Math Caret
+# --
+\${$1}^{$2}\$$0

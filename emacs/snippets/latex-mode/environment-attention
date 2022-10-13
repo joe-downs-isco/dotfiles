@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Environment Attention
+# --
+\begin{attention}
+  $1
+\end{attention}
+$0

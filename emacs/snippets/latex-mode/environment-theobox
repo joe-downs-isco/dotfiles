@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Environment Theobox
+# --
+\begin{theobox}
+  $1
+\end{theobox}
+$0

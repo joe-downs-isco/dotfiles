@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Environment Equation
+# --
+\begin{equation}
+  $1
+\end{equation}
+$0

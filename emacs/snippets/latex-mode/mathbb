@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+# name: Math Blackboard Bold
+# --
+\$\mathbb{$1}$2\$$0

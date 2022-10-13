@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Environment Definition
+# --
+\begin{definition}
+  $1
+\end{definition}
+$0

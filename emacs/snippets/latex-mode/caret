@@ -1,0 +1,4 @@
+# -*- mode: snippet -*-
+# name: Caret
+# --
+^{$1}$0
