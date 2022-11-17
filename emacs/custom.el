@@ -12,7 +12,7 @@
  '(inhibit-startup-screen t)
  '(org-support-shift-select t)
  '(package-selected-packages
-   '(yasnippet-snippets yasnippet groovy-mode helm-projectile projectile helm-ag helm-swoop diredfl elcord helm use-package org-roam company-anaconda anaconda-mode bibtex-utils gemini-mode elpher magit fzf rainbow-identifiers rainbow-delimiters company-fuzzy company-c-headers company yaml yaml-mode json-mode banner-comment auctex web-mode linum-off fill-column-indicator latex-extra gh-md markdown-mode wucuo))
+   '(lorem-ipsum yasnippet-snippets yasnippet groovy-mode helm-projectile projectile helm-ag helm-swoop diredfl elcord helm use-package org-roam company-anaconda anaconda-mode bibtex-utils gemini-mode elpher magit fzf rainbow-identifiers rainbow-delimiters company-fuzzy company-c-headers company yaml yaml-mode json-mode banner-comment auctex web-mode linum-off fill-column-indicator latex-extra gh-md markdown-mode wucuo))
  '(save-place-mode t)
  '(scroll-bar-mode nil)
  '(scroll-down-aggressively 0.25)
@@ -33,7 +33,7 @@
  '(custom-variable-tag ((t (:foreground "#af5f00" :weight bold))))
  '(fill-column-indicator ((t (:foreground "#cd0000"))))
  '(font-latex-sectioning-5-face ((t (:foreground "#00ffff" :weight bold))))
- '(font-lock-builtin-face ((t (:foreground "#875f87"))))
+ '(font-lock-builtin-face ((t (:foreground "#cd5c5c"))))
  '(font-lock-comment-delimiter-face ((t (:inherit font-lock-comment-face))))
  '(font-lock-comment-face ((t (:foreground "#5faf00"))))
  '(font-lock-doc-face ((t (:foreground "#875f00"))))
