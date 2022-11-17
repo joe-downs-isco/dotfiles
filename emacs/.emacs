@@ -128,11 +128,11 @@
 (with-eval-after-load 'magit-mode
   (add-hook 'after-save-hook 'magit-after-save-refresh-status t))
 
-;;;; Elcord (Discord rich presence integration)
+;;; Elcord (Discord rich presence integration)
 (require 'elcord)
 (elcord-mode)
 
-;;;; Diredfl
+;;; Diredfl
 (require 'diredfl)
 (add-hook 'dired-mode-hook 'diredfl-mode)
 
@@ -155,12 +155,12 @@
 
 
 
-;;;; External Configs
+;;; External Configs
 ;; Load separate config file for helm stuffs
 (setq helm-cfg-file (concat home-emacs-d "cfg-helm.el"))
 (load helm-cfg-file)
 
-;; Org Stuffs
+;;;; Org Stuffs
 (setq org-cfg-file (concat home-emacs-d "cfg-org.el"))
 (load org-cfg-file)
 ;; Set a LaTeX packages to fix the horrible default margins
@@ -168,7 +168,7 @@
 ;; Hide markup characters (e.g., *foo* would just be foo [but bold])
 (setq org-hide-emphasis-markers t)
 
-;;; LaTeX stuffs
+;;;; LaTeX stuffs
 ;; Turn off fontifying (e.g., making sub- and super-scripts smaller)
 (setq tex-fontify-script nil)
 (setq font-latex-fontify-script nil)
