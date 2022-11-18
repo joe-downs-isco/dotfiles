@@ -15,6 +15,10 @@
 (setq keybinds-file (concat home-emacs-d "keybinds.el"))
 (load keybinds-file)
 
+;; Custom-set keywords for syntax highlightling
+(setq keywords-file (concat home-emacs-d "keywords.el"))
+(load keywords-file)
+
 ;; Enable installation of packages from MELPA (Milkypostman's Emacs Lisp Package
 ;; Archive). Code below taken from https://melpa.org/#/getting-started
 (require 'package)
@@ -135,6 +139,15 @@
 ;;; Diredfl
 (require 'diredfl)
 (add-hook 'dired-mode-hook 'diredfl-mode)
+
+;;; GNU Octave
+(setq auto-mode-alist
+      (cons '("\\.m$" . octave-mode) auto-mode-alist))
+(add-hook 'octave-mode-hook
+	  (lambda ()
+            (abbrev-mode 1)
+            (auto-fill-mode 1)
+            (font-lock-mode 1)))
 
 ;;; Projectile
 (require 'projectile)
