@@ -75,6 +75,10 @@
 (defun visible-whitespace () (setq show-trailing-whitespace t))
 (add-hook 'prog-mode-hook 'visible-whitespace)
 (add-hook 'text-mode-hook 'visible-whitespace)
+
+;; Don't use tabs for indenting
+(setq-default indent-tabs-mode nil)
+
 ;;; Package Customization
 
 ;; Use company-mode (autocompletion) everywhere
