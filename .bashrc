@@ -23,6 +23,11 @@ if [ -x ~/go ]; then
     export GOPATH="~/go"
 fi
 
+# Add cargo binary dir to PATH
+if [ -x ~/.cargo/bin ]; then
+    export PATH=~/.cargo/bin:$PATH
+fi
+
 # Add ~/.emacs.d/bin to the $PATH so that we can call 'doom' directly
 export PATH=$HOME/.emacs.d/bin:$PATH
 
