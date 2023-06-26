@@ -79,6 +79,7 @@
 ;; Don't use tabs for indenting
 (setq-default indent-tabs-mode nil)
 
+
 ;;; Package Customization
 
 ;; Use company-mode (autocompletion) everywhere
@@ -152,6 +153,9 @@
             (abbrev-mode 1)
             (auto-fill-mode 1)
             (font-lock-mode 1)))
+
+;;; nasm-mode
+(require 'nasm-mode)
 
 ;;; Projectile
 (require 'projectile)
