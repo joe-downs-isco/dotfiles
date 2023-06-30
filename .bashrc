@@ -35,6 +35,9 @@ export PATH=$HOME/.emacs.d/bin:$PATH
 # directly.
 export PATH=$HOME/git/dotfiles/shell:$PATH
 
+# Add ~/.local/bin to $PATH
+export PATH=$HOME/.local/bin:$PATH
+
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
