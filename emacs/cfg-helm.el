@@ -1,7 +1,6 @@
 ;;;; Helm Customization
 ;; Taken from https://tuhdo.github.io/helm-intro.html
 (require 'helm)
-(require 'helm-config)
 (require 'helm-swoop)
 
 ;; (Re)bind some things to use Helm
