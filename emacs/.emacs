@@ -79,6 +79,10 @@
 ;; Don't use tabs for indenting
 (setq-default indent-tabs-mode nil)
 
+;; Desktop Save Mode
+(desktop-save-mode 1)
+;; Only instantly restore 10 buffers (the reset are restored when Emacs is idle)
+(setq desktop-restore-eager 10)
 
 ;;; Package Customization
 
