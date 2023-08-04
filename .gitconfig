@@ -4,23 +4,24 @@
 
 [alias]
 	ad = add
-	br = branch
 	apr = pull --rebase
-	pr = pull --rebase
+	br = branch
+	ci = commit
+	co = checkout
+	com = commit --signoff
 	di = diff
 	dif = diff
-	ci = commit
-	st = status
-	sts = status --short
-	stat = status
-	co = checkout
+	dw = diff --word-diff
 	fap = fetch --all --prune
-	logs = log --topo-order --decorate --stat
 	graph = log --graph --decorate --abbrev-commit --pretty=oneline --max-count=10
 	grapha = log --graph --decorate --abbrev-commit --pretty=oneline --all --max-count=10
 	graphaa = log --graph --decorate --abbrev-commit --pretty=oneline --all
-	dw = diff --word-diff
-	com = commit --signoff
+	logs = log --topo-order --decorate --stat
+	pr = pull --rebase
+	st = status
+	stat = status
+	sts = status --short
+        pop = stash pop
 [core]
 	editor = emacs -nw
 	excludesFile = /home/joe/git/dotfiles/.gitignore
