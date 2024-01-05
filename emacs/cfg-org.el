@@ -6,7 +6,7 @@
 (use-package org-roam
   :ensure t
   :custom
-  (org-roam-directory (file-truename "~/git/roam-notes/"))
+  (org-roam-directory (file-truename "~/git-personal/roam-notes/"))
   :bind (("C-c n l" . org-roam-buffer-toggle)
          ("C-c n f" . org-roam-node-find)
          ("C-c n g" . org-roam-graph)

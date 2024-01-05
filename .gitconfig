@@ -1,7 +1,7 @@
+
 [user]
 	name = Joe Downs
-	email = joe@dwns.dev
-
+	email = joe.downs@isco-pipe.com
 [alias]
 	ad = add
 	apr = pull --rebase
@@ -18,14 +18,23 @@
 	graphaa = log --graph --decorate --abbrev-commit --pretty=oneline --all
 	logs = log --topo-order --decorate --stat
 	pr = pull --rebase
+        pullt = pull --tags
+        pusht = push --tags
 	st = status
 	stat = status
 	sts = status --short
         pop = stash pop
 [core]
 	editor = emacs -nw
-	excludesFile = /home/joe/git/dotfiles/.gitignore
+	excludesFile = ~/git/dotfiles/.gitignore
 [commit]
-	template = /home/joe/git/dotfiles/.gitmessage.txt
+	template = ~/git/dotfiles/.gitmessage.txt
 [init]
 	defaultBranch = main
+
+#[includeIf "gitdir:~/git/"]
+#           path = ~/.gitconfig
+
+# Use personal .gitconfig when at work
+[includeIf "gitdir:~/git-personal/"]
+           path = ~/git-personal/.gitconfig
