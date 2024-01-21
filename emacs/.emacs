@@ -205,6 +205,22 @@
 (setq tex-fontify-script nil)
 (setq font-latex-fontify-script nil)
 
+;;;; LSP Configs
+;; Add ~/.cargo/bin to the exec path
+(setq cargo-bin-d (expand-file-name "~/.cargo/bin/"))
+(setq exec-path (append (list cargo-bin-d) exec-path))
+
+;; LaTeX
+(require 'lsp-latex)
+
+(with-eval-after-load "tex-mode"
+ (add-hook 'tex-mode-hook 'lsp)
+ (add-hook 'latex-mode-hook 'lsp))
+
+;; For bibtex
+(with-eval-after-load "bibtex"
+ (add-hook 'bibtex-mode-hook 'lsp))
+
 (use-package lsp-mode
   :hook ((c-mode          ; clangd
           c++-mode        ; clangd

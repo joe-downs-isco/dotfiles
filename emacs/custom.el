@@ -13,7 +13,7 @@
  '(org-agenda-files '("~/Documents/org-testing.org"))
  '(org-support-shift-select t)
  '(package-selected-packages
-   '(lsp-pyright lsp-java helm-lsp lsp-ui sideline-lsp auto-complete-rst multiple-cursors graphviz-dot-mode sql-indent nasm-mode lorem-ipsum yasnippet-snippets yasnippet groovy-mode helm-projectile projectile helm-ag helm-swoop diredfl elcord helm use-package org-roam company-anaconda anaconda-mode bibtex-utils gemini-mode elpher magit fzf rainbow-identifiers rainbow-delimiters company-fuzzy company-c-headers company yaml yaml-mode json-mode banner-comment auctex web-mode linum-off fill-column-indicator latex-extra gh-md markdown-mode wucuo))
+   '(lsp-latex lsp-pyright lsp-java helm-lsp lsp-ui sideline-lsp auto-complete-rst multiple-cursors graphviz-dot-mode sql-indent nasm-mode lorem-ipsum yasnippet-snippets yasnippet groovy-mode helm-projectile projectile helm-ag helm-swoop diredfl elcord helm use-package org-roam company-anaconda anaconda-mode bibtex-utils gemini-mode elpher magit fzf rainbow-identifiers rainbow-delimiters company-fuzzy company-c-headers company yaml yaml-mode json-mode banner-comment auctex web-mode linum-off fill-column-indicator latex-extra gh-md markdown-mode wucuo))
  '(save-place-mode t)
  '(scroll-bar-mode nil)
  '(scroll-down-aggressively 0.25)
