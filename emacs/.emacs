@@ -84,6 +84,11 @@
 ;; Only instantly restore 10 buffers (the reset are restored when Emacs is idle)
 (setq desktop-restore-eager 10)
 
+;;; Line Numbers
+;; Use line numebrs only in programming and text modes
+(add-hook 'prog-mode-hook #'display-line-numbers-mode)
+(add-hook 'text-mode-hook #'display-line-numbers-mode)
+
 ;;; Package Customization
 
 ;; Use company-mode (autocompletion) everywhere
