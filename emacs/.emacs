@@ -105,14 +105,6 @@
 ;; Turn off company-dabbrev downcasing (e.g., turning "fooBar" to "foobar")
 (setq company-dabbrev-downcase nil)
 
-;; Enable linum mode for smartly adding line numbers to buffers.
-(setq line-number-mode t)
-(setq linum-format "%d ")
-(global-linum-mode 1)
-;; Don't put line numbers in all modes; e.g., we don't need it in *scratch*, and
-;; line numbers really confuse gdb mode.
-(require 'linum-off)
-
 ;; Turn on rainbow-related modes for most programming modes
 ;;(add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
