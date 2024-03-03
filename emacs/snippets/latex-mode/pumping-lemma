@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# name: Pumping Lemma
+# key: lemma
+# --
+\begin{enumerate}[label=\roman*.]
+\item Assume $L$ is regular: $L \in RL$
+\item Select $w$: $w = $
+\item Decompose $w$:
+  \begin{enumerate}[label=(\alph*)]
+  \item $w = $: $x=$, $y=$, $z=$
+  \end{enumerate}
+\item Make pumping:
+  \begin{enumerate}[label=(\alph*)]
+  \item $w_i = $: $x=$, $y=$, $z=$
+  \end{enumerate}
+\item
+  \begin{enumerate}[label=(\alph*)]
+  \item pumping up: $i>   \Rightarrow w_i \not\in L$
+  \end{enumerate}
+\item Our initial assumption was wrong, $\therefore L \not\in RL$
+\end{enumerate}
