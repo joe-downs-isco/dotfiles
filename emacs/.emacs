@@ -91,16 +91,17 @@
 
 ;;; Package Customization
 
+;;;; Company
 ;; Use company-mode (autocompletion) everywhere
 (add-hook 'after-init-hook 'global-company-mode)
-;; No delay in showing suggestions.
-(setq company-idle-delay 0)
+;; 0.5 sec delay in showing suggestions.
+(setq company-idle-delay 0.5)
 ;; Show suggestions after entering one character.
 (setq company-minimum-prefix-length 1)
 ;; Wrap around to the top after reaching the bottom of the suggestion list.
 (setq company-selection-wrap-around t)
-;; Use tab key to cycle through suggestions. ('tng' means 'tab and go')
-(company-tng-configure-default)
+;; Uncomment to use tab key to cycle through suggestions. ('tng' means 'tab and go')
+;;(company-tng-configure-default)
 
 ;; Initialize backends for different company-related packages AFTER company has
 ;; loaded, so that this variable actually exists.
