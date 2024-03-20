@@ -166,6 +166,10 @@
 ;;; nasm-mode
 (require 'nasm-mode)
 
+;;; poporg
+(autoload 'poporg-dwim "poporg" nil t)
+(global-set-key (kbd "C-c \"") 'poporg-dwim)
+
 ;;; Projectile
 (require 'projectile)
 (setq helm-projectile-fuzzy-match nil)
