@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: texthl
+# key: hl
+# --
+\texthl{$1}$0
