@@ -89,6 +89,9 @@
 (add-hook 'prog-mode-hook #'display-line-numbers-mode)
 (add-hook 'text-mode-hook #'display-line-numbers-mode)
 
+;; Enable downcase-region
+(put 'downcase-region 'disabled nil)
+
 ;;; Package Customization
 
 ;;;; Company
