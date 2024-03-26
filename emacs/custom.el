@@ -12,6 +12,8 @@
  '(fringe-mode 0 nil (fringe))
  '(helm-full-frame t)
  '(inhibit-startup-screen t)
+ '(lsp-ui-doc-position 'at-point)
+ '(lsp-ui-doc-show-with-cursor t)
  '(org-agenda-files '("~/Documents/org-testing.org"))
  '(org-support-shift-select t)
  '(package-selected-packages
