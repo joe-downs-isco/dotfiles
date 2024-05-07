@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Language (Automata)
+# key: lang
+# --
+
+$L = \\{$1 : $2\\}$$0

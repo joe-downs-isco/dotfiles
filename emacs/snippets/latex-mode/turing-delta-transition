@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Turing Machine Delta Transition
+# key: tdelta
+# --
+\delta(q_$1,$2)  &= (q_$3,$4,$5)\\\\
+$0

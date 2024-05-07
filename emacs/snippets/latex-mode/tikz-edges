@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Tikz Graph Edges
+# key: edge
+# --
+(q_$1) edge$2node$3{\$$4\$} (q_$5)$0

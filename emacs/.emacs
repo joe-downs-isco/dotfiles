@@ -84,18 +84,27 @@
 ;; Only instantly restore 10 buffers (the reset are restored when Emacs is idle)
 (setq desktop-restore-eager 10)
 
+;;; Line Numbers
+;; Use line numebrs only in programming and text modes
+(add-hook 'prog-mode-hook #'display-line-numbers-mode)
+(add-hook 'text-mode-hook #'display-line-numbers-mode)
+
+;; Enable downcase-region
+(put 'downcase-region 'disabled nil)
+
 ;;; Package Customization
 
+;;;; Company
 ;; Use company-mode (autocompletion) everywhere
 (add-hook 'after-init-hook 'global-company-mode)
-;; No delay in showing suggestions.
-(setq company-idle-delay 0)
+;; 0.5 sec delay in showing suggestions.
+(setq company-idle-delay 0.5)
 ;; Show suggestions after entering one character.
 (setq company-minimum-prefix-length 1)
 ;; Wrap around to the top after reaching the bottom of the suggestion list.
 (setq company-selection-wrap-around t)
-;; Use tab key to cycle through suggestions. ('tng' means 'tab and go')
-(company-tng-configure-default)
+;; Uncomment to use tab key to cycle through suggestions. ('tng' means 'tab and go')
+;;(company-tng-configure-default)
 
 ;; Initialize backends for different company-related packages AFTER company has
 ;; loaded, so that this variable actually exists.
@@ -104,14 +113,6 @@
 
 ;; Turn off company-dabbrev downcasing (e.g., turning "fooBar" to "foobar")
 (setq company-dabbrev-downcase nil)
-
-;; Enable linum mode for smartly adding line numbers to buffers.
-(setq line-number-mode t)
-(setq linum-format "%d ")
-(global-linum-mode 1)
-;; Don't put line numbers in all modes; e.g., we don't need it in *scratch*, and
-;; line numbers really confuse gdb mode.
-(require 'linum-off)
 
 ;; Turn on rainbow-related modes for most programming modes
 ;;(add-hook 'prog-mode-hook 'rainbow-identifiers-mode)
@@ -168,6 +169,10 @@
 ;;; nasm-mode
 (require 'nasm-mode)
 
+;;; poporg
+(autoload 'poporg-dwim "poporg" nil t)
+(global-set-key (kbd "C-c \"") 'poporg-dwim)
+
 ;;; Projectile
 (require 'projectile)
 (setq helm-projectile-fuzzy-match nil)
@@ -205,3 +210,58 @@
 (setq tex-fontify-script nil)
 (setq font-latex-fontify-script nil)
 
+;;;; LSP Configs
+;; Add ~/.cargo/bin to the exec path
+(setq cargo-bin-d (expand-file-name "~/.cargo/bin/"))
+(setq exec-path (append (list cargo-bin-d) exec-path))
+
+;; LaTeX
+(require 'lsp-latex)
+
+(with-eval-after-load "tex-mode"
+ (add-hook 'tex-mode-hook 'lsp)
+ (add-hook 'latex-mode-hook 'lsp))
+
+;; For bibtex
+(with-eval-after-load "bibtex"
+ (add-hook 'bibtex-mode-hook 'lsp))
+
+(use-package lsp-mode
+  :hook ((c-mode          ; clangd
+          c++-mode        ; clangd
+          c-or-c++-mode   ; clangd
+          java-mode       ; eclipse-jdtls
+          js-mode         ; ts-ls (tsserver wrapper)
+          js-jsx-mode     ; ts-ls (tsserver wrapper)
+          typescript-mode ; ts-ls (tsserver wrapper)
+          python-mode     ; pyright
+          web-mode        ; ts-ls/HTML/CSS
+          haskell-mode    ; haskell-language-server
+          ) . lsp-deferred)
+  :commands lsp
+  :config
+  (setq lsp-auto-guess-root t)
+  (setq lsp-log-io nil)
+  (setq lsp-restart 'auto-restart)
+  (setq lsp-enable-symbol-highlighting nil)
+  (setq lsp-enable-on-type-formatting nil)
+  (setq lsp-signature-auto-activate nil)
+  (setq lsp-signature-render-documentation nil)
+  (setq lsp-eldoc-hook nil)
+  (setq lsp-modeline-code-actions-enable nil)
+  (setq lsp-modeline-diagnostics-enable nil)
+  (setq lsp-headerline-breadcrumb-enable nil)
+  (setq lsp-semantic-tokens-enable nil)
+  (setq lsp-enable-folding nil)
+  (setq lsp-enable-imenu nil)
+  (setq lsp-enable-snippet nil)
+  (setq read-process-output-max (* 1024 1024)) ;; 1MB
+  (setq lsp-idle-delay 0.5))
+
+(use-package lsp-java
+  :after lsp)
+
+(use-package lsp-pyright
+  :hook (python-mode . (lambda () (require 'lsp-pyright)))
+  :init (when (executable-find "python3")
+          (setq lsp-pyright-python-executable-cmd "python3")))

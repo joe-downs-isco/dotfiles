@@ -3,6 +3,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(auto-save-interval 10)
+ '(auto-save-visited-interval 10)
  '(bibtex-comment-start "%")
  '(display-fill-column-indicator-character 124)
  '(elcord-refresh-rate 5)
@@ -10,10 +12,12 @@
  '(fringe-mode 0 nil (fringe))
  '(helm-full-frame t)
  '(inhibit-startup-screen t)
+ '(lsp-ui-doc-position 'at-point)
+ '(lsp-ui-doc-show-with-cursor t)
  '(org-agenda-files '("~/Documents/org-testing.org"))
  '(org-support-shift-select t)
  '(package-selected-packages
-   '(multiple-cursors graphviz-dot-mode sql-indent nasm-mode lorem-ipsum yasnippet-snippets yasnippet groovy-mode helm-projectile projectile helm-ag helm-swoop diredfl elcord helm use-package org-roam company-anaconda anaconda-mode bibtex-utils gemini-mode elpher magit fzf rainbow-identifiers rainbow-delimiters company-fuzzy company-c-headers company yaml yaml-mode json-mode banner-comment auctex web-mode linum-off fill-column-indicator latex-extra gh-md markdown-mode wucuo))
+   '(poporg lsp-latex lsp-pyright lsp-java helm-lsp lsp-ui sideline-lsp auto-complete-rst multiple-cursors graphviz-dot-mode sql-indent nasm-mode lorem-ipsum yasnippet-snippets yasnippet groovy-mode helm-projectile projectile helm-ag helm-swoop diredfl elcord helm use-package org-roam company-anaconda anaconda-mode bibtex-utils gemini-mode elpher magit fzf rainbow-identifiers rainbow-delimiters company-fuzzy company-c-headers company yaml yaml-mode json-mode banner-comment auctex web-mode fill-column-indicator latex-extra gh-md markdown-mode wucuo))
  '(save-place-mode t)
  '(scroll-bar-mode nil)
  '(scroll-down-aggressively 0.25)
@@ -29,7 +33,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :extend nil :stipple nil :background "#232627" :foreground "#fcfcfc" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
+ '(default ((t (:inherit nil :extend nil :stipple nil :background "#232627" :foreground "#fcfcfc" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
  '(custom-group-tag ((t (:inherit variable-pitch :foreground "#d7d700" :weight bold :height 1.2))))
  '(custom-variable-tag ((t (:foreground "#af5f00" :weight bold))))
  '(fill-column-indicator ((t (:foreground "#cd0000"))))

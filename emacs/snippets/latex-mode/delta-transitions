@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Delta Transition
+# key: delta
+# --
+\delta(q_$1,$2,$3)  &= (q_$4,$5)\\\\
+$0
